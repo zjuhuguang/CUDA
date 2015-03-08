@@ -1,0 +1,104 @@
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <cutil.h>
+#include "util.h"
+#include "ref_2dhisto.h"
+
+#define SIZE 1024
+
+__global__ void histogramKernel(uint32_t* input, size_t height, size_t width, uint32_t* g_bins, uint8_t* D_bins);
+//__global__ void mergeKernel(uint32_t* g_bins, uint8_t* D_bins);
+
+
+void opt_2dhisto(uint32_t* D_input, int height, int width,  uint32_t* g_bins, uint8_t* D_bins)
+{
+	cudaMemset(g_bins, 0, HISTO_HEIGHT * HISTO_WIDTH * sizeof(uint32_t));
+//    	cudaMemset(D_bins, 0, HISTO_HEIGHT * HISTO_WIDTH * sizeof(uint8_t));
+    	histogramKernel<<<1, 1024>>>(D_input, height, width, g_bins, D_bins);
+//	cudaThreadSynchronize();
+//	mergeKernel<<<1, 1024>>>(g_bins, D_bins);
+	cudaThreadSynchronize();
+
+}
+
+__global__ void histogramKernel(uint32_t* input, size_t height, size_t width, uint32_t* g_bins, uint8_t* D_bins)
+{
+	__shared__ uint32_t s_Hist[SIZE];
+
+	int globalTid  = blockIdx.x * blockDim.x + threadIdx.x;
+	int numThreads = blockDim.x * gridDim.x;	
+
+	//initialize the shared memory
+	s_Hist[threadIdx.x] = 0;
+//	s_Hist[threadIdx.x + blockDim.x] = 0;
+	__syncthreads ();
+	for (int pos = globalTid; pos < height * width; pos += numThreads) {
+		if (s_Hist[input[pos]] < UINT8_MAX)
+			atomicAdd (s_Hist + input[pos], 1);
+//		__syncthreads();	
+	}
+	__syncthreads();	
+
+//	for (int pos = threadIdx.x; pos < 1024; pos += blockDim.x)	
+//	D_bins[globalTid] = (uint8_t)(s_Hist[globalTid] < UINT8_MAX ? s_Hist[globalTid] : UINT8_MAX);
+	if(g_bins[threadIdx.x] < 255)
+	atomicAdd(g_bins + threadIdx.x, s_Hist[threadIdx.x]);
+	D_bins[globalTid] = (uint8_t)(g_bins[globalTid] < UINT8_MAX ? g_bins[globalTid] : UINT8_MAX);
+//		atomicAdd(g_bins + threadIdx.x + blockDim.x, s_Hist[threadIdx.x + blockDim.x]);
+//	__syncthreads();	
+
+}
+/*
+__global__ void mergeKernel(uint32_t* g_bins, uint8_t* D_bins)
+
+{
+	int globalTid  = blockIdx.x * blockDim.x + threadIdx.x;
+	D_bins[globalTid] = (uint8_t)(g_bins[globalTid] < UINT8_MAX ? g_bins[globalTid] : UINT8_MAX);
+}
+*/
+/* Include below the implementation of any other functions you need */
+void* AllocateDevice(size_t size)
+{
+	void *result;
+	cudaMalloc(&result, size);
+	return result;
+}
+
+void MemCpyToDevice(void* dst, void* src, size_t size)
+{
+	cudaMemcpy(dst, src, size, cudaMemcpyHostToDevice);
+}
+
+void CopyFromDevice(void* D_host, void* D_device, size_t size)
+{
+	cudaMemcpy(D_host, D_device, size, cudaMemcpyDeviceToHost);
+}
+
+
+void FreeDevice(void* D_device)
+{
+	cudaFree(D_device);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+O_SRCS += \
+../src/src/lab3/obj/x86_64/release/opt_2dhisto.cu.o \
+../src/src/lab3/obj/x86_64/release/ref_2dhisto.cpp.o \
+../src/src/lab3/obj/x86_64/release/test_harness.cpp.o \
+../src/src/lab3/obj/x86_64/release/util.cpp.o 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+

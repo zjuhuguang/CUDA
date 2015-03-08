@@ -1,0 +1,61 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../src/common/src/bank_checker.cpp \
+../src/common/src/cmd_arg_reader.cpp \
+../src/common/src/cuda_runtime_dynlink.cpp \
+../src/common/src/cutil.cpp \
+../src/common/src/multithreading.cpp \
+../src/common/src/param.cpp \
+../src/common/src/paramgl.cpp \
+../src/common/src/rendercheck_d3d10.cpp \
+../src/common/src/rendercheck_d3d11.cpp \
+../src/common/src/rendercheck_d3d9.cpp \
+../src/common/src/rendercheck_gl.cpp \
+../src/common/src/stopwatch.cpp \
+../src/common/src/stopwatch_linux.cpp 
+
+OBJS += \
+./src/common/src/bank_checker.o \
+./src/common/src/cmd_arg_reader.o \
+./src/common/src/cuda_runtime_dynlink.o \
+./src/common/src/cutil.o \
+./src/common/src/multithreading.o \
+./src/common/src/param.o \
+./src/common/src/paramgl.o \
+./src/common/src/rendercheck_d3d10.o \
+./src/common/src/rendercheck_d3d11.o \
+./src/common/src/rendercheck_d3d9.o \
+./src/common/src/rendercheck_gl.o \
+./src/common/src/stopwatch.o \
+./src/common/src/stopwatch_linux.o 
+
+CPP_DEPS += \
+./src/common/src/bank_checker.d \
+./src/common/src/cmd_arg_reader.d \
+./src/common/src/cuda_runtime_dynlink.d \
+./src/common/src/cutil.d \
+./src/common/src/multithreading.d \
+./src/common/src/param.d \
+./src/common/src/paramgl.d \
+./src/common/src/rendercheck_d3d10.d \
+./src/common/src/rendercheck_d3d11.d \
+./src/common/src/rendercheck_d3d9.d \
+./src/common/src/rendercheck_gl.d \
+./src/common/src/stopwatch.d \
+./src/common/src/stopwatch_linux.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/common/src/%.o: ../src/common/src/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: NVCC Compiler'
+	nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/common/src" -M -o "$(@:%.o=%.d)" "$<"
+	nvcc -G -g -O0 --compile  -x c++ -o  "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

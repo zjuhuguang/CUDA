@@ -1,0 +1,2 @@
+In our implementation of tiled matrix multiplication, we can scheduled 2048 * 8 = 16384 threads simultaneously on a GeForce GTX-680 GPU. 
+In our implementation we firstly transpose the matrix and put it into the kernel.

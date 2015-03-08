@@ -1,0 +1,19 @@
+
+**** Build of configuration Default for project labs ****
+
+make all 
+make[1]: Entering directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/common'
+make[1]: Leaving directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/common'
+make[1]: Entering directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/common'
+make[1]: Leaving directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/common'
+make[1]: Entering directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/common'
+make[1]: Leaving directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/common'
+make[1]: Entering directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/shared'
+make[1]: Leaving directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/shared'
+make -C src/lab1/ all
+make[1]: Entering directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/src/lab1'
+make[1]: *** No rule to make target `all'.  Stop.
+make[1]: Leaving directory `/home/ghk455/CUDA/EECS468-CUDA-Labs/labs/src/lab1'
+make: *** [src/lab1/Makefile.ph_build] Error 2
+
+**** Build Finished ****

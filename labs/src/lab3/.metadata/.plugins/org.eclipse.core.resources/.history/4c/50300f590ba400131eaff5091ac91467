@@ -1,0 +1,19 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+O_SRCS += \
+../src/common/obj/x86_64/release/bank_checker.cpp.o \
+../src/common/obj/x86_64/release/cmd_arg_reader.cpp.o \
+../src/common/obj/x86_64/release/cutil.cpp.o \
+../src/common/obj/x86_64/release/multithreading.cpp.o \
+../src/common/obj/x86_64/release/param.cpp.o \
+../src/common/obj/x86_64/release/paramgl.cpp.o \
+../src/common/obj/x86_64/release/rendercheck_gl.cpp.o \
+../src/common/obj/x86_64/release/stopwatch.cpp.o \
+../src/common/obj/x86_64/release/stopwatch_linux.cpp.o 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+

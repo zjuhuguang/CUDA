@@ -1,0 +1,8 @@
+
+**** Clean-only build of configuration Debug for project lab3 ****
+
+make clean 
+rm -rf  ./src/lab3.d  ./src/lab3.o  lab3
+ 
+
+**** Build Finished ****

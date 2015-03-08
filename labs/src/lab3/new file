@@ -1,0 +1,34 @@
+    Timing 'ref_2dhisto' started
+        GetTimeOfDay Time (for 1000 iterations) = 11.048
+        Clock Time        (for 1000 iterations) = 11.04
+    Timing 'ref_2dhisto' ended
+    Timing 'opt_2dhisto' started
+        GetTimeOfDay Time (for 1000 iterations) = 40.578
+        Clock Time        (for 1000 iterations) = 40.55
+    Timing 'opt_2dhisto' ended
+
+    Test PASSED
+
+
+    Timing 'ref_2dhisto' started
+        GetTimeOfDay Time (for 1000 iterations) = 11.17
+        Clock Time        (for 1000 iterations) = 11.16
+    Timing 'ref_2dhisto' ended
+    Timing 'opt_2dhisto' started
+        GetTimeOfDay Time (for 1000 iterations) = 5.139
+        Clock Time        (for 1000 iterations) = 5.13
+    Timing 'opt_2dhisto' ended
+
+    Test PASSED
+
+
+        GetTimeOfDay Time (for 1000 iterations) = 11.186
+        Clock Time        (for 1000 iterations) = 11.17
+    Timing 'ref_2dhisto' ended
+    Timing 'opt_2dhisto' started
+        GetTimeOfDay Time (for 1000 iterations) = 3.709
+        Clock Time        (for 1000 iterations) = 3.7
+
+
+
+

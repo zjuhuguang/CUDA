@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <cuda.h>
+#include <curand.h>
+#include <stdint.h>
+#include <curand_kernel.h>
+/*
+__global__ void random (int64_t* devData)
+{
+	int threadId = blockIdx.x * blockDim.x + threadIdx.x;
+	curandState* local_state;
+	curand_init (time(NULL), threadId, 0, &local_state[threadId]);
+	devData[threadId] = curand_uniform(&local_state);
+}
+*/
+/*
+
+int main(int argc, char*argv[])
+{
+	size_t n = 16;
+	size_t i;
+//	curandGenerator_t gen;
+	int64_t *devData, *hostData;
+	hostData = (int64_t *)calloc(n, sizeof(int64_t));
+	cudaMalloc((void **)&devData, n * sizeof(int64_t));
+//	curandCreateGenerator(&gen, CURAND_RNG_PSEUDO_DEFAULT);
+//	curandSetPseudoRandomGeneratorSeed(gen, 1234ULL);
+//	curandGenerateUniform(gen, devData, n);
+	random<<<1, n>>>(devData);
+	cudaMemcpy(hostData, devData, n * sizeof(int64_t), cudaMemcpyDeviceToHost);
+    for(i = 0; i < n; i++)
+    {
+        printf("%d\n", hostData[i]);
+    }
+    printf("\n");
+//    curandDestroyGenerator (gen);
+    cudaFree ( devData );
+    free ( hostData );
+    return 0;
+}
+*/
+
+int main(int argc, char*argv[])
+{
+	size_t n = 32;
+	size_t i;
+	curandGenerator_t gen;
+	float *devData, *hostData;
+	hostData = (float *)calloc(n, sizeof(float));
+	cudaMalloc((void **)&devData, n * sizeof(float));
+	curandCreateGenerator(&gen, CURAND_RNG_PSEUDO_DEFAULT);
+	curandSetPseudoRandomGeneratorSeed(gen, 1234ULL);
+	curandGenerateUniform(gen, devData, n);
+	cudaMemcpy(&hostData, devData, n * sizeof(float),cudaMemcpyDeviceToHost);
+	for (i = 0; i < n; i ++)
+		printf("%1.4f\n", hostData[i]);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

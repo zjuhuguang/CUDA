@@ -1,0 +1,138 @@
+
+**** Build of configuration Debug for project test ****
+
+make 
+make: `src/test.o' is up to date.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project test ****
+
+make clean 
+rm -rf  ./src/test.d  ./src/src/lab3/opt_2dhisto.d  ./src/src/lab3/test/src/test.d  ./src/src/lab2/matrixmul.d ./src/src/lab2/matrixmul_kernel.d  ./src/src/lab1/matrixmul.d ./src/src/lab1/matrixmul_kernel.d  ./src/test.o  ./src/src/lab3/opt_2dhisto.o ./src/src/lab3/ref_2dhisto.o ./src/src/lab3/test_harness.o ./src/src/lab3/util.o  ./src/src/lab3/test/src/test.o  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./src/src/lab2/matrixmul.o ./src/src/lab2/matrixmul_gold.o ./src/src/lab2/matrixmul_kernel.o  ./src/src/lab1/matrixmul.o ./src/src/lab1/matrixmul_gold.o ./src/src/lab1/matrixmul_kernel.o  ./src/common/src/bank_checker.o ./src/common/src/cmd_arg_reader.o ./src/common/src/cuda_runtime_dynlink.o ./src/common/src/cutil.o ./src/common/src/multithreading.o ./src/common/src/param.o ./src/common/src/paramgl.o ./src/common/src/rendercheck_d3d10.o ./src/common/src/rendercheck_d3d11.o ./src/common/src/rendercheck_d3d9.o ./src/common/src/rendercheck_gl.o ./src/common/src/stopwatch.o ./src/common/src/stopwatch_linux.o  ./src/common/inc/cuda_drvapi_dynlink.o  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./src/common/inc/cuda_drvapi_dynlink.d  ./src/src/lab3/ref_2dhisto.d ./src/src/lab3/test_harness.d ./src/src/lab3/util.d  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./src/src/lab2/matrixmul_gold.d  ./src/src/lab1/matrixmul_gold.d  ./src/common/src/bank_checker.d ./src/common/src/cmd_arg_reader.d ./src/common/src/cuda_runtime_dynlink.d ./src/common/src/cutil.d ./src/common/src/multithreading.d ./src/common/src/param.d ./src/common/src/paramgl.d ./src/common/src/rendercheck_d3d10.d ./src/common/src/rendercheck_d3d11.d ./src/common/src/rendercheck_d3d9.d ./src/common/src/rendercheck_gl.d ./src/common/src/stopwatch.d ./src/common/src/stopwatch_linux.d  test
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project test ****
+
+make 
+Building file: ../src/test.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/test.d" "../src/test.cu"
+nvcc --compile -G -O0 -g -gencode arch=compute_30,code=compute_30 -gencode arch=compute_30,code=sm_30  -x cu -o  "src/test.o" "../src/test.cu"
+Finished building: ../src/test.cu
+ 
+Building file: ../src/src/lab3/opt_2dhisto.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/src/lab3/opt_2dhisto.d" "../src/src/lab3/opt_2dhisto.cu"
+nvcc --compile -G -O0 -g -gencode arch=compute_30,code=compute_30 -gencode arch=compute_30,code=sm_30  -x cu -o  "src/src/lab3/opt_2dhisto.o" "../src/src/lab3/opt_2dhisto.cu"
+Finished building: ../src/src/lab3/opt_2dhisto.cu
+ 
+Building file: ../src/src/lab3/ref_2dhisto.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/ref_2dhisto.d" "../src/src/lab3/ref_2dhisto.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/ref_2dhisto.o" "../src/src/lab3/ref_2dhisto.cpp"
+Finished building: ../src/src/lab3/ref_2dhisto.cpp
+ 
+Building file: ../src/src/lab3/test_harness.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/test_harness.d" "../src/src/lab3/test_harness.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/test_harness.o" "../src/src/lab3/test_harness.cpp"
+Finished building: ../src/src/lab3/test_harness.cpp
+ 
+Building file: ../src/src/lab3/util.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/util.d" "../src/src/lab3/util.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/util.o" "../src/src/lab3/util.cpp"
+Finished building: ../src/src/lab3/util.cpp
+ 
+Building file: ../src/src/lab3/test/src/test.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/src/lab3/test/src/test.d" "../src/src/lab3/test/src/test.cu"
+nvcc --compile -G -O0 -g -gencode arch=compute_30,code=compute_30 -gencode arch=compute_30,code=sm_30  -x cu -o  "src/src/lab3/test/src/test.o" "../src/src/lab3/test/src/test.cu"
+Finished building: ../src/src/lab3/test/src/test.cu
+ 
+Building file: ../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d" "../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp"
+Finished building: ../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp
+ 
+Building file: ../src/src/lab2/matrixmul.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/src/lab2/matrixmul.d" "../src/src/lab2/matrixmul.cu"
+../src/src/lab2/matrixmul.cu:47:19: error: cutil.h: No such file or directory
+../src/src/lab2/matrixmul.cu:50:31: error: matrixmul_kernel.cu: No such file or directory
+make: *** [src/src/lab2/matrixmul.o] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project test ****
+
+make clean 
+rm -rf  ./src/test.d  ./src/src/lab3/opt_2dhisto.d  ./src/src/lab3/test/src/test.d  ./src/src/lab2/matrixmul.d ./src/src/lab2/matrixmul_kernel.d  ./src/src/lab1/matrixmul.d ./src/src/lab1/matrixmul_kernel.d  ./src/test.o  ./src/src/lab3/opt_2dhisto.o ./src/src/lab3/ref_2dhisto.o ./src/src/lab3/test_harness.o ./src/src/lab3/util.o  ./src/src/lab3/test/src/test.o  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./src/src/lab2/matrixmul.o ./src/src/lab2/matrixmul_gold.o ./src/src/lab2/matrixmul_kernel.o  ./src/src/lab1/matrixmul.o ./src/src/lab1/matrixmul_gold.o ./src/src/lab1/matrixmul_kernel.o  ./src/common/src/bank_checker.o ./src/common/src/cmd_arg_reader.o ./src/common/src/cuda_runtime_dynlink.o ./src/common/src/cutil.o ./src/common/src/multithreading.o ./src/common/src/param.o ./src/common/src/paramgl.o ./src/common/src/rendercheck_d3d10.o ./src/common/src/rendercheck_d3d11.o ./src/common/src/rendercheck_d3d9.o ./src/common/src/rendercheck_gl.o ./src/common/src/stopwatch.o ./src/common/src/stopwatch_linux.o  ./src/common/inc/cuda_drvapi_dynlink.o  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./src/common/inc/cuda_drvapi_dynlink.d  ./src/src/lab3/ref_2dhisto.d ./src/src/lab3/test_harness.d ./src/src/lab3/util.d  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./src/src/lab2/matrixmul_gold.d  ./src/src/lab1/matrixmul_gold.d  ./src/common/src/bank_checker.d ./src/common/src/cmd_arg_reader.d ./src/common/src/cuda_runtime_dynlink.d ./src/common/src/cutil.d ./src/common/src/multithreading.d ./src/common/src/param.d ./src/common/src/paramgl.d ./src/common/src/rendercheck_d3d10.d ./src/common/src/rendercheck_d3d11.d ./src/common/src/rendercheck_d3d9.d ./src/common/src/rendercheck_gl.d ./src/common/src/stopwatch.d ./src/common/src/stopwatch_linux.d  test
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project test ****
+
+make 
+Building file: ../src/test.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/test.d" "../src/test.cu"
+nvcc --compile -G -O0 -g -gencode arch=compute_30,code=compute_30 -gencode arch=compute_30,code=sm_30  -x cu -o  "src/test.o" "../src/test.cu"
+Finished building: ../src/test.cu
+ 
+Building file: ../src/src/lab3/opt_2dhisto.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/src/lab3/opt_2dhisto.d" "../src/src/lab3/opt_2dhisto.cu"
+nvcc --compile -G -O0 -g -gencode arch=compute_30,code=compute_30 -gencode arch=compute_30,code=sm_30  -x cu -o  "src/src/lab3/opt_2dhisto.o" "../src/src/lab3/opt_2dhisto.cu"
+Finished building: ../src/src/lab3/opt_2dhisto.cu
+ 
+Building file: ../src/src/lab3/ref_2dhisto.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/ref_2dhisto.d" "../src/src/lab3/ref_2dhisto.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/ref_2dhisto.o" "../src/src/lab3/ref_2dhisto.cpp"
+Finished building: ../src/src/lab3/ref_2dhisto.cpp
+ 
+Building file: ../src/src/lab3/test_harness.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/test_harness.d" "../src/src/lab3/test_harness.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/test_harness.o" "../src/src/lab3/test_harness.cpp"
+Finished building: ../src/src/lab3/test_harness.cpp
+ 
+Building file: ../src/src/lab3/util.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/util.d" "../src/src/lab3/util.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/util.o" "../src/src/lab3/util.cpp"
+Finished building: ../src/src/lab3/util.cpp
+ 
+Building file: ../src/src/lab3/test/src/test.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/src/lab3/test/src/test.d" "../src/src/lab3/test/src/test.cu"
+nvcc --compile -G -O0 -g -gencode arch=compute_30,code=compute_30 -gencode arch=compute_30,code=sm_30  -x cu -o  "src/src/lab3/test/src/test.o" "../src/src/lab3/test/src/test.cu"
+Finished building: ../src/src/lab3/test/src/test.cu
+ 
+Building file: ../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src/src/lab3" -M -o "src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d" "../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp"
+nvcc -G -g -O0 --compile  -x c++ -o  "src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp"
+Finished building: ../src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.cpp
+ 
+Building file: ../src/src/lab2/matrixmul.cu
+Invoking: NVCC Compiler
+nvcc -G -g -O0 -gencode arch=compute_30,code=sm_30 -odir "src" -M -o "src/src/lab2/matrixmul.d" "../src/src/lab2/matrixmul.cu"
+../src/src/lab2/matrixmul.cu:50:31: error: matrixmul_kernel.cu: No such file or directory
+make: *** [src/src/lab2/matrixmul.o] Error 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project test ****
+
+make clean 
+rm -rf  ./src/test.d  ./src/src/lab3/opt_2dhisto.d  ./src/src/lab3/test/src/test.d  ./src/src/lab2/matrixmul.d ./src/src/lab2/matrixmul_kernel.d  ./src/src/lab1/matrixmul.d ./src/src/lab1/matrixmul_kernel.d  ./src/test.o  ./src/src/lab3/opt_2dhisto.o ./src/src/lab3/ref_2dhisto.o ./src/src/lab3/test_harness.o ./src/src/lab3/util.o  ./src/src/lab3/test/src/test.o  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./src/src/lab2/matrixmul.o ./src/src/lab2/matrixmul_gold.o ./src/src/lab2/matrixmul_kernel.o  ./src/src/lab1/matrixmul.o ./src/src/lab1/matrixmul_gold.o ./src/src/lab1/matrixmul_kernel.o  ./src/common/src/bank_checker.o ./src/common/src/cmd_arg_reader.o ./src/common/src/cuda_runtime_dynlink.o ./src/common/src/cutil.o ./src/common/src/multithreading.o ./src/common/src/param.o ./src/common/src/paramgl.o ./src/common/src/rendercheck_d3d10.o ./src/common/src/rendercheck_d3d11.o ./src/common/src/rendercheck_d3d9.o ./src/common/src/rendercheck_gl.o ./src/common/src/stopwatch.o ./src/common/src/stopwatch_linux.o  ./src/common/inc/cuda_drvapi_dynlink.o  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./src/common/inc/cuda_drvapi_dynlink.d  ./src/src/lab3/ref_2dhisto.d ./src/src/lab3/test_harness.d ./src/src/lab3/util.d  ./src/src/lab3/.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./src/src/lab2/matrixmul_gold.d  ./src/src/lab1/matrixmul_gold.d  ./src/common/src/bank_checker.d ./src/common/src/cmd_arg_reader.d ./src/common/src/cuda_runtime_dynlink.d ./src/common/src/cutil.d ./src/common/src/multithreading.d ./src/common/src/param.d ./src/common/src/paramgl.d ./src/common/src/rendercheck_d3d10.d ./src/common/src/rendercheck_d3d11.d ./src/common/src/rendercheck_d3d9.d ./src/common/src/rendercheck_gl.d ./src/common/src/stopwatch.d ./src/common/src/stopwatch_linux.d  test
+ 
+
+**** Build Finished ****
